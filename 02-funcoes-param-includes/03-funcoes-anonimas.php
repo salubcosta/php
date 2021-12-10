@@ -7,7 +7,6 @@ $calcularPorcentagem = function($valor, $percentual):float{
 
 echo $calcularPorcentagem(8,10).PHP_EOL;
 
-
 #arrow function
 $arrowFunc = fn($value, $param) => $value * ($param/100);
 
