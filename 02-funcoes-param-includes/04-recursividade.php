@@ -1,5 +1,6 @@
 <?php
 
+#recursividade - função que chama a si mesma.
 function dividir($numero, $controle = 0){
     $controle++;
     #round é usado para arredondar
