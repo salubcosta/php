@@ -49,6 +49,25 @@
          } else {
              echo "E-mail inválido!";
          }
+
+         /**
+          * Há um filtro interessante: filter_input(INPUT_GET, 'nomeInput', FILTER_SANITIZE_SPECIAL_CHARS)
+          * Esse filter_sanitize_special_chars faz com que comandos dentro de input se transformem em texto não executável,
+          * Então, caso alguém queira informar tags html dentro do input, ou js dentro dos inputs, será convertido para txt
+          * Exemplo de filtros:
+          1 - FILTER_VALIDATE_EMAIL
+          2 - FILTER_VALIDATE_INT
+          3 - FILTER_VALIDATE_FLOAT
+          4 - FILTER_VALIDATE_IP
+          5 - FILTER_VALIDATE_URL
+
+          1 - FILTER_SANITIZE_EMAIL
+          2 - FILTER_SANITIZE_STRING
+          3 - FILTER_SANITIZE_SPECIAL_CHARS
+          4 - FILTER_SANITIZE_URL
+          5 - FILTER_SANITIZE_NUMBER_FLOAT
+
+          */
     ?>
 </body>
 </html>
