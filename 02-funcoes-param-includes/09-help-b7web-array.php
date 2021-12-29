@@ -39,8 +39,6 @@ $array2 = array(
         2 => "solteiro")
 );
 
-
-
 $arrNaoRepeteEm2 = function($arr1, $arr2){
     $arr = array();
     for($i = 0; $i < count($arr1); $i++){
@@ -56,8 +54,3 @@ $arrNaoRepeteEm2 = function($arr1, $arr2){
 };
 
 print_r($arrNaoRepeteEm2($array1, $array2));
-
-// $numeros = [10, 20, 25, 91, 18, 41];
-// $filtrados = array_filter($numeros, function($item){
-//     return $item > 20; #retornar o item que é maior que 20.
-// });
