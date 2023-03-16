@@ -1,3 +1,3 @@
 # PHP
 
-<p>Repo criado para acompanhar curso da @b7web sobre PHP</p>
+<p>Repo para tratar de tópicos de PHP e agora, formação PHP da TreinaWEB</p>
