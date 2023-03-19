@@ -24,3 +24,33 @@ echo "<br>";
 
 var_dump($exponenciacao);
 echo "<br>";
+
+/**
+ * Operadores de comparação:
+ * A == B
+ * A != B
+ * A <> B
+ * A === B
+ * A !== B
+ * A < B
+ * A <= B
+ * A > B
+ * A >= B
+ */
+
+/**
+ * Operadores lógicos:
+ * A && B
+ * A and B
+ * A || B
+ * A or B
+ * A XOR B
+ * !A (negação)
+ */
+
+/**
+ * Operadores de concatenação
+ */
+$escola = "Treinaweb";
+$curso = "PHP";
+echo $escola .' - '. $curso;
