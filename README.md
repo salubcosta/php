@@ -2,6 +2,8 @@
 
 <p>Repo para tratar de tópicos de PHP e testes.</p>
 
+<hr>
+
 ## Formação: Aprenda a programar em PHP com Orientação a Objetos
 
 - [x] PHP: criando sua aplicação -> [Certificado](https://cursos.alura.com.br/user/salumao-costa/course/php-criando-aplicacao/formalCertificate)
