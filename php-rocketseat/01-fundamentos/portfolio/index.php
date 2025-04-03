@@ -62,9 +62,11 @@
         $projetosFiltrados = filtro($projetos, function($obj){
             return $obj['ano'] <= 2025;
         });*/
+        
         $projetosFiltrados = array_filter($projetos, function($projeto){
             return $projeto['ano']<= 2025;
         });
+
     ?>
     <h1><?=$titulo?></h1>
     <p><?=$subtitulo?></p>
