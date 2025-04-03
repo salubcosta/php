@@ -22,19 +22,19 @@
             [
                 "titulo" => "Meu portfolio",
                 "finalizado" => true,
-                "dataProjeto" => date("d-m-Y"),
+                "ano" => date("Y"),
                 "descricao" => "Meu primeiro portfolio. Escrito em PHP e HTML"
             ],
             [
                 "titulo" => "Lista de Tarefas",
                 "finalizado" => false,
-                "dataProjeto" => date("d-m-Y"),
+                "ano" => date("Y"),
                 "descricao" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum ex fuga nihil facilis quisquam. Dicta reprehenderit officiis quae, commodi minima maiores autem corporis asperiores ipsam, exercitationem earum. Voluptatem, alias sint."
             ],
             [
                 "titulo" => "Controle de Leitura de Livros",
                 "finalizado" => false,
-                "dataProjeto" => date("d-m-Y"),
+                "ano" => date("Y")-1,
                 "descricao" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum ex fuga nihil facilis quisquam. Dicta reprehenderit officiis quae, commodi minima maiores autem corporis asperiores ipsam, exercitationem earum. Voluptatem, alias sint."
             ]
         ];
@@ -46,20 +46,25 @@
                 return '<p>⛔ Não Finalizado...</p>';
         }
 
-        function filtroProjetosFinalizados($projetos, $finalizado = null){
+        function filtro($itens, $funcao){  
             $filtrados = [];
 
-            if(is_null($finalizado)){
-                return $projetos;
-            }
-
-            foreach($projetos as $projeto):
-                if($projeto['finalizado'] === $finalizado):
-                    $filtrados[] = $projeto;
+            foreach($itens as $item):
+                if($funcao($item)):
+                    $filtrados[] = $item;
                 endif;
             endforeach;
             return $filtrados;
-        }
+        };
+
+        /*
+        Tudo isso pode ser substituído pelo array_filter
+        $projetosFiltrados = filtro($projetos, function($obj){
+            return $obj['ano'] <= 2025;
+        });*/
+        $projetosFiltrados = array_filter($projetos, function($projeto){
+            return $projeto['ano']<= 2025;
+        });
     ?>
     <h1><?=$titulo?></h1>
     <p><?=$subtitulo?></p>
@@ -67,12 +72,12 @@
 
     <hr>
 
-    <?php foreach(filtroProjetosFinalizados($projetos, null) as $projeto): ?>
+    <?php foreach($projetosFiltrados as $projeto): ?>
         <div>
             <h2><?=$projeto["titulo"]?></h2>
             <p><?=$projeto["descricao"] ?></p>
             <div>
-                <p><?=$projeto["dataProjeto"]?></p>
+                <p><?=$projeto["ano"]?></p>
             </div>
             <div>
                 <?=verificarSeEstaFinalizado($projeto)?>
