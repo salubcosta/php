@@ -23,7 +23,8 @@
                 "titulo" => "Meu portfolio",
                 "finalizado" => true,
                 "ano" => date("Y"),
-                "descricao" => "Meu primeiro portfolio. Escrito em PHP e HTML"
+                "descricao" => "Meu primeiro portfolio. Escrito em PHP e HTML",
+                "stack" => ["PHP", "HTML", "CSS", "JS"]
             ],
             [
                 "titulo" => "Lista de Tarefas",
